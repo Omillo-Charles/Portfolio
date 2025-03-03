@@ -167,6 +167,63 @@ p.buttons button{
     border-radius: 8px;
     margin: 0.4rem;
     box-shadow: inset 0 0 2px var(--font_color);
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 }
+
+@keyframes bounce {
+    0%{
+        transform: translateY(1.2rem);
+    }
+    25%{
+        transform: translateY(-1.2rem);
+    }
+    50%{
+        transform: translateY(1.2rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+div.about_skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+}
+
+div.about_me{
+    border: 2px solid whitesmoke;
+    padding: 1.2rem;
+    border-radius: 16px;
+    margin-top: 8rem;
+    width: 40%;
+    box-shadow: inset 0 0 8px var(--font_color);
+    box-shadow:  12px 0 12px var(--font_color);
+}
+
+div.about_me h4{
+    color: var(--font_color);
+    position: absolute;
+    transform: translateY(-3.8rem);
+    background-color: white;
+    padding: 0.12rem 0.8rem;
+    border-radius: 16px;
+    border: 2px solid var(--font_color);
+}
+
+div.about_me p span{
+   color: #ff00ff;
+}
+
+div.about_me p a{
+    text-decoration: underline;
+    color: var(--font_color);
+}
+
 
 
