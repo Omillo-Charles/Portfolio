@@ -7,9 +7,7 @@ body{
     box-sizing: border-box;
     color: whitesmoke;
     font-family: "PT Sans Narrow", sans-serif;
-    width: 98vw;
-    margin: 2rem;
-    padding: 2rem;
+    overflow-x: hidden;
 }
 
 main.main_content{
@@ -28,7 +26,7 @@ main.main_content{
     --link_hover : white;
     --drop_back : #ffffff4f;
 }
-/* 
+
 header.heading_and_navlinks{
     background-color: black;
     color: white;
@@ -40,9 +38,10 @@ div.heading{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 2.4rem;
+    margin-left: 2.4rem;
     text-align: center;
+    line-height: 0.8;
+    text-shadow: var(--drop_back);
 }
 
 div.heading h1 span{
@@ -52,8 +51,7 @@ div.heading h1 span{
 }
 
 div.navlinks{
-    position: absolute;
-    right: 1.6rem;
+    flex-wrap: wrap;
 }
 
 div.navlinks ul.nav{
@@ -62,6 +60,7 @@ div.navlinks ul.nav{
     align-items: center;
     flex-direction: row;
     list-style-type: none;
+    flex-wrap: wrap;
 }
 
 div.navlinks ul.nav li{
@@ -81,7 +80,7 @@ div.navlinks ul.nav li a{
 }
 
 div.navlinks ul.nav li a:hover{
-    box-shadow: 0 8px 8px var(--drop_back);
+    box-shadow: 0 8px 8px var(--font_color);
 }
 
 div.navlinks ul.nav li a:active{
@@ -124,7 +123,7 @@ i{
     transition: 0.4s ease;
 }
 
-section.main{
+/* section.main{
     grid-area: main;
     position: relative;
     top: 20rem;
@@ -147,9 +146,58 @@ div.text_buttons{
     margin-left: 7.2rem;
 }
 
+div.about_skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 80%;
+    margin-top: 8rem;
+
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+    }
+}
+ */
+
+ section.main{
+    grid-area: main;
+    margin-top: 9.6rem;
+}
+
+div.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media screen and (max-width:768px){
+        flex-direction: column;
+    }
+}
+
+div.image img{
+    border-radius: 50%;
+    box-shadow: 32px 0 12px var(--font_color);
+    border: 2px solid whitesmoke;
+    margin-right: 2.4rem;
+}
+
+div.text_buttons{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.2rem;
+}
+
 div.text_buttons h1{
     font-size: 2.6rem;
     color: white;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+    flex-wrap: wrap;
 }
 
 div.text_buttons h1 span{
@@ -193,9 +241,12 @@ div.about_skills{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    position: relative;
-    width: 80%;
-    margin-top: 8rem;
+    width: 88vw;
+    margin: auto;
+
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+    }
 }
 
 div.about_me{
@@ -205,6 +256,10 @@ div.about_me{
     width: 40%;
     box-shadow: inset 0 0 8px var(--font_color);
     box-shadow:  12px 0 12px var(--font_color);
+
+    @media screen and (max-width:768px) {
+      width: 80vw;
+    }
 }
 
 div.about_me h4{
@@ -248,11 +303,22 @@ div.figures{
 }
 
 div.figures i{
-    margin: 1.6rem;
-    font-size: 2.8rem;
+    margin: 0.8rem;
+   /*  font-size: 2.8rem; */
     font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    color: var(--font_color);
+    color:white;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background-color: var(--font_color);
+    padding: 0.4rem;
+    border: 2px solid whitesmoke;
 }
 
 figure{
@@ -281,6 +347,8 @@ div.services{
     display: flex;
     flex-direction: column;
     margin: 1.6rem;
+    width: 90vw;
+    flex-wrap: wrap;
 }
 
 div.heading_serv h3{
@@ -291,6 +359,8 @@ div.heading_serv h3{
 div.cards{
     display: flex;
     flex-direction: row;
+    width: 90vw;
+    flex-wrap: wrap;
 }
 
 div.card_1{
