@@ -28,7 +28,7 @@ main.main_content{
     --link_hover : white;
     --drop_back : #ffffff4f;
 }
-
+/* 
 header.heading_and_navlinks{
     background-color: black;
     color: white;
@@ -276,7 +276,7 @@ figure figcaption{
 figure figcaption span{
     color: black;
 }
-
+ */
 div.services{
     display: flex;
     flex-direction: column;
