@@ -499,10 +499,15 @@ div.email_call{
     display: flex;
     flex-direction: column;
     border: 2px solid whitesmoke;
-    padding: 1.6rem;
+    padding: 1.2rem;
     border-radius: 16px;
     box-shadow: inset 0 0 16px var(--font_color);
     width: fit-content;
+
+    @media screen and (max-width:768px){
+        width: fit-content;
+        flex-wrap: wrap;
+    }
 }
 
 p.call a{
@@ -534,6 +539,57 @@ p.email a{
 
 p.email span{
     color: var(--font_color);
+}
+
+div.cont_flex{
+    margin: 1.2rem;
+}
+
+div.portfolio{
+    display: flex;
+    margin-left: 1.6rem;
+    flex-direction: column;
+    margin-top: 1.6rem;
+}
+
+div.port_heading{
+    color: var(--font_color);
+}
+
+div.port_navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.port_navbar nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    background-color: white;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid var(--font_color);
+    border-radius: 32px;
+    box-shadow: 0 0 16px var(--font_color);
+}
+
+div.port_navbar nav ul li{
+    margin: 0.4rem;
+}
+
+div.port_navbar nav ul li a{
+    text-decoration: none;
+    color: var(--font_color);
+    text-shadow: 0 0 1.2px black;
+}
+
+div.port_navbar nav ul li a:hover{
+    text-decoration: underline;
+}
+
+div.port_navbar nav ul li a:active{
+    text-decoration: underline;
 }
 
 
